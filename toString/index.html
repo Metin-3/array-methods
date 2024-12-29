@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        li {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        span {
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>toString Arry Method</h1>
+    <ol type="1">
+        <li>
+            toString() metodu massiv dəyərləri vergüllə ayrılmış sətri qaytarır. Orijinal massivi dəyişdirmir.
+        </li>
+        <li>
+            JavaScript-in bütün obyektlərində mövcud olan bir metoddur. Bu metod bir obyektin məzmununu və ya dəyərini
+            mətn (string) formasında təqdim edir.
+            Hər bir obyekt növü üçün fərqli bir toString() funksiyası mövcuddur.
+        </li>
+    </ol>
+
+    <p>
+    <h1>
+        Əsas Xüsusiyyətlər: <br>
+    </h1>
+    <span>
+        Təyinatı: <br>
+        Obyekti və ya dəyəri mətnə çevirmək üçün istifadə olunur. <br> <br>
+    </span>
+    <hr>
+    <span>
+        Standart Davranış: <br>
+        Əgər istifadəçi tərəfindən bir obyekt üçün xüsusi toString() təyin edilməyibsə, JavaScript-in daxili toString()
+        funksiyası çağırılır və bu da obyektin növünü ([object Type]) qaytarır. <br>
+        Bu cümlənin mənası, JavaScript-in standart davranışının necə olduğunu izah edir və əgər xüsusi bir şey təyin
+        olunmazsa, sistemin necə davrandığını göstərir.
+        <br> <br>
+    </span>
+    <hr>
+    <span>
+        Data tiplərinə görə davranış: <br>
+        Primitive dəyərlər: String, Number, Boolean, Array, və s. üçün müəyyən bir qaytarma davranışı var.
+        Obyektlər: Əgər bir obyekt üçün xüsusi toString() metodu təyin edilməyibsə, "[object Object]" qaytarılır. <br>
+        <br>
+    </span>
+
+    </p>
+
+    <h3>Nəticə:</h3> <br>
+    <h4>
+        toString() metodu JavaScript-də obyektləri və dəyərləri mətn formatına çevirmək üçün əvəzolunmaz bir metoddur.
+        Müxtəlif tiplərə uyğun olaraq fərqli nəticələr qaytarır və istifadəçi tərəfindən xüsusi davranışlar təyin etmək
+        imkanı da verir.
+    </h4><br> <br>
+
+    <h3>Yadda saxlanmalı əsas məqamlar:</h3> <br>
+    <h4>1. Primitive tiplərdə dəyəri stringə çevirmək üçün birbaşa istifadə olunur.</h4>
+    <h4>2. Obyektlərdə toString() metodunu dəyişdirmək mümkündür.</h4>
+    <h4>3. Əgər obyekt üçün xüsusi toString() təyin edilməyibsə, JavaScript standart metodu qaytarır ("[object
+        Object]").</h4>
+
+    <script src="./main.js"></script>
+    <!-- JavaScript dilində toString() metodunu mənə izah et və misallar göstər. tam detallı şəkildə izah et. -->
+</body>
+
+</html>
