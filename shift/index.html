@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shift method</title>
+    <style>
+        body {
+            padding: 0 20px;
+        }
+
+        h1 {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        ol {
+            margin: 20px 0;
+        }
+
+        ul{
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>shift() method</h1>
+    <p>
+
+        JavaScript-də shift() metodu, bir massivdəki ilk elementi silmək üçün istifadə olunur və silinmiş elementi
+        qaytarır. Bu metod orijinal <mark>massivi dəyişdirir</mark> və bütün qalan elementləri sola doğru bir mövqe
+        sürüşdürür.
+    </p>
+
+    <h2>Xüsusiyyətləri:</h2>
+    <ol>
+        <li>
+            <b>Əsas Funksiya:</b> Massivin birinci elementini silir və həmin elementi qaytarır.
+        </li>
+        <li>
+            <b>Orijinal Massivi Dəyişdirir:</b> shift() mövcud massivin tərkibini və uzunluğunu dəyişdirir.
+        </li>
+        <li>
+            <b>Boş Massivdə Davranış:</b> Əgər massiv boşdursa, shift() undefined qaytarır.
+        </li>
+        <li>
+            <b>Bütün Elementləri Sola Sürüşdürür:</b> Silinən elementdən sonra gələn bütün elementlər bir mövqe sola
+            keçir.
+        </li>
+    </ol>
+
+    <h2>Fərqlər və Əlaqəli Metodlar:</h2>
+    <ol>
+        <li>
+            shift() vs pop():
+            <ul>
+                <li>
+                    shift() massivin ilk elementini silir.
+                </li>
+                <li>
+                    pop() massivin sonuncu elementini silir.
+                </li>
+            </ul>
+        </li>
+        <li>
+            shift() vs unshift():
+            <ul>
+                <li>
+                    shift() massivin əvvəlindən elementi silir.
+                </li>
+                <li>
+                    unshift() massivin əvvəlinə yeni element əlavə edir.
+                </li>
+            </ul>
+        </li>
+        <li>
+            shift() vs splice():
+            <ul>
+                <li>
+                    shift() yalnız ilk elementi silir.
+                </li>
+                <li>
+                    splice() isə istənilən yerdəki elementi silə və ya əvəz edə bilər.
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+    <p>
+        shift() metodu JavaScript-də massivlərin idarə edilməsi üçün güclü bir vasitədir. Əsasən, FIFO prinsipi ilə
+        işləyən ssenarilərdə və ya sıradan məlumatları götürmək üçün istifadə olunur. Bu metodun istifadəsi ilə
+        məlumatların birbaşa idarəsini həyata keçirmək mümkündür.
+    </p>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
