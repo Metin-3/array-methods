@@ -9,7 +9,8 @@
 //     }
 //   };
 
-//   console.log(car1.toString()); // Car: Tesla Model S
+//   console.log(car1.toString()); // Car: Tesla Model 
+
 
 //? Əgər belə bir metod əlavə edilməsəydi, standart toString() çağırılardı:
 
@@ -64,6 +65,7 @@
 // const isVisible = 5 > 3; // true
 // console.log(isVisible.toString()); // "true"
 
+
 //? toString() metodunun qısayol alternativi: Əgər Boolean dəyəri bir stringlə birləşdirilirsə, JavaScript avtomatik olaraq onu string formatına çevirir:
 
 // const isAvailable = true;
@@ -100,6 +102,7 @@
 // console.log(emptyArr.toString()); // ""
 
 
+
 //? Əgər massivdəki bir element artıq String formatındadırsa, olduğu kimi götürülür.
 //? Əgər element başqa bir tipdədirsə (məsələn, Number, Boolean, və s.), həmin elementin toString() metodu çağırılır.
 
@@ -110,6 +113,8 @@
 //? İzah: Daxili massiv [2, 3] stringə çevrilərək "2,3" olur və əsas massivin bir hissəsi kimi birləşdirilir.
 // const nestedArr = [1, [2, 3], 4];
 // console.log(nestedArr.toString()); // "1,2,3,4"
+
+
 
 //? Əgər massivdə boş elementlər varsa (məsələn, undefined və ya boş yerlər), onlar stringdə boş bir yer kimi göstərilir.
 // const arr4 = [1, , 3];
@@ -197,6 +202,8 @@
 //? Fərqli növ obyektlər:
 //? Object.prototype.toString() obyektin daxili növünü müəyyən etmək üçün faydalıdır. Əgər bir obyektin növünü dəqiq müəyyən etmək istəyirsinizsə, Object.prototype.toString.call(obj) sintaksisindən istifadə edin. Bu metod hər hansı obyekt üçün onun daxili növünü qaytarır.
 //? Məsələn, massivlər və tarixlər də obyektlərdir, amma onların növünü fərqləndirmək üçün bu metod istifadə olunur.
+
+
 // console.log(Object.prototype.toString.call([]));       // "[object Array]"
 // console.log(Object.prototype.toString.call(new Date())); // "[object Date]"
 // console.log(Object.prototype.toString.call(/abc/));    // "[object RegExp]"
@@ -241,5 +248,5 @@
 //todo------------------------------------------------------------
 
 //! Date obyektində toString() tarix və vaxtı oxunaqlı formatda qaytarır.
-// let now = new Date();
-// console.log(now.toString()); // Məsələn: "Sun Dec 29 2024 12:45:30 GMT+0400 (Azerbaijan Standard Time)"
+let now = new Date();
+console.log(now.toString()); // Məsələn: "Sun Dec 29 2024 12:45:30 GMT+0400 (Azerbaijan Standard Time)"

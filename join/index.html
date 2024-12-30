@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        ol {
+            padding: 0 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>join() method</h1>
+
+    <p>
+        JavaScript-də join() metodu, massivdəki bütün elementləri birləşdirərək bir sətir (string) yaradır. Bu metod
+        massiv elementlərini təyin etdiyiniz bir ayrıcı (separator) ilə birləşdirir və nəticəni qaytarır. Əgər ayrıcı
+        təyin edilməsə, standart olaraq vergül (,) istifadə olunur.
+    </p>
+
+    <ol>
+        <li>
+            join() metodu mövcud olan massivi dəyişdirmir. Yalnız yeni bir sətir qaytarır.
+        </li>
+        <li>
+            Əgər massivdəki elementlərdən biri undefined, null və ya boş elementdirsə, bu, sətirdə boşluq kimi qəbul
+            edilir.
+        </li>
+        <li>
+            Boş massivdə ([]) join() çağırıldıqda, boş bir sətir ("") qaytarır.
+        </li>
+    </ol>
+
+    <p>
+        join() metodu JavaScript-də sadə, amma güclü bir vasitədir. Xüsusilə mətnlər arasında birləşmə əməliyyatları
+        üçün əvəzolunmazdır.
+    </p>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
