@@ -35,7 +35,7 @@
 
 
 //!=================================================================================
-//! 2--> Number tipləri üçün toString() metodu dəyəri stringə çevirir. Bu metodda opsional olaraq əsas (radix) göstərilə bilər.
+//! 2--> Number tipləri üçün toString() metodu, dəyəri stringə çevirir. Bu metodda opsional olaraq əsas (radix) göstərilə bilər.
 
 //? toString() metodu ədədi fərqli ədədi sistemlərdə təmsil etmək üçün radix parametrini qəbul edir.
 //? radix 2 ilə 36 arasında bir rəqəm ola bilər və bu, ədədin hansı əsasda göstəriləcəyini müəyyən edir.
@@ -174,9 +174,6 @@
 
 
 
-
-
-
 //todo------------------------------------------------------------
 
 //! Obyektlərdə  toString()
@@ -237,10 +234,6 @@
 
 
 
-
-
-
-
 //todo------------------------------------------------------------
 
 //! Date Tiplərində toString()
@@ -248,5 +241,5 @@
 //todo------------------------------------------------------------
 
 //! Date obyektində toString() tarix və vaxtı oxunaqlı formatda qaytarır.
-let now = new Date();
-console.log(now.toString()); // Məsələn: "Sun Dec 29 2024 12:45:30 GMT+0400 (Azerbaijan Standard Time)"
+// let now = new Date();
+// console.log(now.toString()); // Məsələn: "Sun Dec 29 2024 12:45:30 GMT+0400 (Azerbaijan Standard Time)"

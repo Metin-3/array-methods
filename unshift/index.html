@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unshift</title>
+
+    <style>
+        body {
+            padding: 0 20px;
+        }
+
+        h1 {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        ol {
+            margin: 20px 0;
+        }
+
+        ul {
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>unshift() Arry Method</h1>
+    <p>
+        unshift() JavaScript-də bir array metodudur və mövcud bir array-in əvvəlinə bir və ya bir neçə element əlavə
+        etmək üçün istifadə olunur. Bu metod orijinal array-i dəyişdirir və array-in yeni uzunluğunu qaytarır.
+    </p>
+
+
+    <h2>Geri Qaytarılan Dəyər:</h2>
+    <ol>
+        <li>Array-in yeni uzunluğu.</li>
+    </ol>
+
+    <h2>Xüsusiyyətləri:</h2>
+    <ol>
+        <li>
+            <b>Orijinal array dəyişir: </b>unshift() metodu orijinal array-in tərkibini dəyişdirir.
+        </li>
+        <li>
+            <b>Çoxlu element əlavə etmə imkanı:</b> Bir neçə elementi eyni anda əlavə edə bilərsiniz.
+        </li>
+        <li>
+            <b>İlk sıraya əlavə edir:</b> Yeni elementlər array-in əvvəlinə yerləşdirilir.
+        </li>
+    </ol>
+
+
+    <h2>Nəticə</h2>
+    <p>
+        unshift() array-in əvvəlinə elementlər əlavə etmək üçün faydalı bir metoddur və orijinal array-i dəyişir. Böyük
+        datasetlərdə istifadə edərkən performans təsirini nəzərə almaq lazımdır, çünki unshift() hər dəfə digər
+        elementləri bir mövqeyə irəli çəkir.
+    </p>
+
+    <p><b>unshift() </b>Elementləri array-in əvvəlinə əlavə edir. <b> Başlanğıc</b></p>
+    <p><b>push() </b> Elementləri array-in sonuna əlavə edir. <b> Son</b></p>
+
+    <p>
+        <b>Yavaşlıq Riski: </b> unshift() böyük massivlərlə işləyərkən performans təsirinə malik ola bilər. Bunun
+        səbəbi, mövcud
+        elementlərin hər dəfə bir pillə irəli çəkilməsidir.
+    </p>
+    <p>
+        <b>Alternativlər: </b> Əgər başlanğıca element əlavə etməyə ehtiyac yoxdursa, push() performans baxımından daha
+        effektiv
+        ola bilər, çünki o, mövcud elementləri yerindən tərpətmir.
+    </p>
+
+    
+    <script src="./main.js"></script>
+</body>
+
+</html>
