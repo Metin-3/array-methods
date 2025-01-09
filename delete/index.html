@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+
+    <style>
+        body {
+            padding: 0 20px;
+        }
+
+        h1 {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        ol {
+            margin: 20px 0;
+        }
+
+        ul {
+            padding: 0 20px;
+        }
+
+        span {
+            display: block;
+            margin: 10px 0;
+        }
+
+        b {
+            display: block;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>delete Arry Method</h1>
+    <p>
+        delete operatoru JavaScript-də obyektlərdən və ya massivlərdən müəyyən bir xüsusiyyəti (property) və ya elementi
+        silmək üçün istifadə olunur. Bu operator verilmiş xüsusiyyətin tamamilə obyektin tərkibindən çıxarılmasını təmin
+        edir.
+    </p>
+
+    <h2>Əsas Xüsusiyyətlər</h2>
+    <ol>
+        <li>
+            <b>Xüsusiyyətləri silir: </b>Obyektlərin daxilindəki xüsusiyyətləri tamamilə çıxarır.
+        </li>
+        <li>
+            <b>İndeksləri tərpətmir:</b> Massivlərdə bir elementi sildikdə indeksləri yenidən düzənləmir. Bunun əvəzinə
+            həmin indeksdə undefined qalır.
+        </li>
+        <li>
+            <b>Daha çox obyektlər üçün uyğundur: </b> Massivlərdə elementləri silmək üçün delete yerinə splice() daha
+            məqsədəuyğundur.
+        </li>
+        <li>
+            <b>Mutasiya edir: </b> Obyektin orijinal strukturu dəyişir.
+        </li>
+    </ol>
+
+
+    <h2>Qeyd ediləsi məqamlar</h2>
+    <p>
+        delete yalnız obyektin öz xüsusiyyətlərini silir. Prototipdə olan xüsusiyyətlərə təsir etmir.
+
+        <b>
+            JavaScript-də obyektlər prototiplər əsasında qurulur. Hər bir obyektin bir prototipi ola bilər və bu
+            prototip vasitəsilə obyekt başqa bir obyektin xüsusiyyətlərini (property) və metodlarını irsi olaraq əldə
+            edə bilər.
+        </b>
+        <b>
+            Misal ilə izah
+        </b>
+        <span>
+            function Person(name) { <br>
+            this.name = name; // Bu obyektin öz xüsusiyyətidir. <br>
+            }<br>
+
+            // Prototipdə bir xüsusiyyət əlavə edirik<br>
+            Person.prototype.age = 25;<br>
+
+            let john = new Person("John"); <br>
+
+            // john obyektində olan xüsusiyyətlər:<br>
+            console.log(john.name); // "John" (john obyektinin özünə aiddir)<br>
+            console.log(john.age); // 25 (john obyektinin prototipindən gəlir)<br>
+        </span>
+        <b>
+            delete nə edir?
+        </b>
+        <span>
+            1--> Obyektin öz xüsusiyyətlərini silə bilir:
+            <span>
+                delete john.name; // john obyektindəki `name` xüsusiyyəti silinir.<br>
+                console.log(john.name); // undefined<br>
+            </span>
+        </span>
+        <span>
+            2--> Prototipdən gələn xüsusiyyətləri silməz:
+            <span>
+                delete john.age; // Bu prototipdə olduğuna görə təsir etmir.<br>
+                console.log(john.age); // 25 (prototipdən gəlməyə davam edir)<br>
+            </span>
+        </span>
+
+        <b>
+            Niyə belə olur?
+        </b>
+        <span>
+            john obyektinin özündə age xüsusiyyəti yoxdur. Bu xüsusiyyət onun prototipindən gəlir.
+        </span>
+        <span>
+            delete yalnız obyektin özündə olan xüsusiyyətləri silə bilər. Prototipdəki xüsusiyyətlər dəyişməz qalır.
+        </span>
+        <b>
+            Prototipdə olan xüsusiyyətləri necə silmək olar?
+        </b>
+
+        <span>
+            Əgər prototipdən gələn bir xüsusiyyəti silmək istəyirsinizsə, onu obyektin prototipindən birbaşa
+            silməlisiniz:
+            <span>
+                delete Person.prototype.age; // Prototipdən `age` xüsusiyyətini silirik.<br>
+                console.log(john.age); // undefined<br>
+            </span>
+        </span>
+
+        <b>Bu fərqi başa düşmək niyə vacibdir?</b>
+        <span>
+            Öz xüsusiyyətlər (Own Properties): Birbaşa obyektin tərkibində olan xüsusiyyətlərdir
+        </span>
+        <span>
+            Prototipdən gələn xüsusiyyətlər (Inherited Properties): Prototip zəncirindən gələn xüsusiyyətlərdir.
+        </span>
+    <p>
+        delete yalnız obyektin öz xüsusiyyətlərini silir. Əgər obyektin daxilində olmayan, amma prototipdən gələn bir
+        xüsusiyyəti silmək istəyirsinizsə, bunu prototip səviyyəsində etmək lazımdır
+    </p>
+    </p>
+    <b>
+        Əgər xüsusiyyətin configurable atributu false-dirsə, onu delete ilə silmək mümkün deyil.
+    </b>
+    <span>
+        JavaScript-də obyekt xüsusiyyətlərinin (property) müəyyən atributları var və bu atributlar xüsusiyyətin
+        davranışını tənzimləyir. Bu atributlardan biri də configurable atributudur.
+        Əgər bir xüsusiyyətin configurable atributu false-dirsə, bu xüsusiyyət müəyyən məhdudiyyətlərə malik olur,
+        məsələn:
+    </span>
+    <p>
+        1--> Bu xüsusiyyəti delete ilə silmək mümkün deyil.
+    </p>
+    <p>
+        2--> Xüsusiyyətin atributlarını dəyişdirmək mümkün olmur (məsələn, writable, enumerable, configurable kimi
+        atributlar dəyişdirilə bilmir).
+    </p>
+
+    <b>
+        configurable atributu nədir?
+    </b>
+    <span>
+        configurable: true — Xüsusiyyət silinə bilər və atributları dəyişdirilə bilər.
+    </span>
+    <span>
+        configurable: false — Xüsusiyyət sabitdir və silinə bilməz.
+    </span>
+    <span>
+        const obj = {}; <br>
+
+        // Yeni bir xüsusiyyət əlavə edirik və onun `configurable` atributunu `false` təyin edirik: <br>
+        Object.defineProperty(obj, "name", { <br>
+        value: "John",<br>
+        configurable: false, // Bu xüsusiyyət sabitdir və silinə bilməz.<br>
+        writable: true, // Dəyərlər yenə də dəyişdirilə bilər.<br>
+        enumerable: true // Dövr edən metodlarda görünür.<br>
+        });<br>
+
+        console.log(obj.name); // "John"<br>
+
+        // `delete` ilə bu xüsusiyyəti silməyə çalışaq:<br>
+        delete obj.name;<br>
+
+        console.log(obj.name); // "John" (xüsusiyyət hələ də mövcuddur!)<br>
+        <span>Burada, delete işləmədi, çünki name xüsusiyyətinin configurable atributu false təyin edilmişdir.</span>
+    </span>
+
+    <b>Niyə configurable false təyin edilir?</b>
+    <p>
+        configurable: false bir xüsusiyyətin sabit olmasını təmin edir və onun strukturu üzərində dəyişiklik edilməsinin
+        qarşısını alır. Bu, xüsusilə aşağıdakı vəziyyətlərdə faydalıdır:
+    </p>
+    <span>
+        1--> Əsas məlumatların qorunması üçün: Əgər bir obyektin müəyyən xüsusiyyətlərinin dəyişdirilməməsini
+        istəyirsinizsə, configurable: false istifadə edərək onları qoruyursunuz.
+    </span>
+    <span>
+        2--> Daha təhlükəsiz API-lər yaratmaq üçün: Böyük tətbiqlərdə təsadüfi silinmə və ya dəyişikliklərin qarşısını
+        almaq üçün.
+    </span>
+
+    <b>configurable atributunun dəyişdirilməzliyi</b>
+    <span>
+        Əgər bir xüsusiyyətin configurable atributu bir dəfə false təyin edilibsə, onu sonradan dəyişdirmək mümkün
+        deyil.
+
+        <span>
+            Object.defineProperty(obj, "name", { <br>
+            configurable: true // Bu xətaya səbəb olacaq! <br>
+            });<br>
+
+        </span>
+    </span>
+
+    <b>configurable: false ilə digər atributlar arasındakı əlaqə</b>
+    <span>Dəyər dəyişdirilə bilər (yazıla bilər), əgər writable: true olarsa.</span>
+    <span>
+        obj.name = "Doe"; // Bu işləyəcək, çünki writable: true <br>
+        console.log(obj.name); // "Doe" <br>
+    </span>
+    <span>
+        Atributları dəyişdirmək mümkün deyil:
+    </span>
+    <span>
+        Object.defineProperty(obj, "name", { <br>
+        writable: false // Bu xəta verəcək! <br>
+        }); <br>
+    </span>
+    <p>
+        configurable atributu obyekt xüsusiyyətlərinin necə işləyəcəyini idarə edir: <br>
+        true olduqda, xüsusiyyət silinə və atributları dəyişdirilə bilər. <br>
+        false olduqda, xüsusiyyət sabit qalır və silinə bilməz. <br>
+        Bu, obyektlərə daha çox nəzarət etməyə imkan verir və mühüm xüsusiyyətlərin təhlükəsizliyini təmin edir.
+    </p>
+    <h2>Geri qaytarır:</h2>
+    <p><b>true : </b>Əgər xüsusiyyət uğurla silinibsə.</p>
+    <p><b>false :</b> Əgər xüsusiyyəti silmək mümkün deyilsə.</p>
+
+
+    <h2>Performans Qeydləri</h2>
+    <p>delete operatorunun performansı yaxşıdır, lakin çox istifadə edildikdə yavaşlıq yarana bilər.</p>
+    <p>Massivlərdə elementləri silmək üçün splice() istifadə etmək daha məqsədəuyğundur.</p>
+
+
+    <p>
+        delete operatoru obyektlərdən və ya massivlərdən xüsusi elementləri silmək üçün sadə və güclü bir vasitədir.
+        Obyektlərlə işləyərkən istifadə üçün idealdır, lakin massivlərdə istifadə edildikdə ehtiyatlı olmaq və mümkün
+        olduqda splice() kimi metodlardan istifadə etmək daha məqsədəuyğundur.
+    </p>
+    <script src="./main.js"></script>
+</body>
+
+</html>
