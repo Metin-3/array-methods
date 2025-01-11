@@ -125,13 +125,13 @@
 //!===================================
 
 //! 1--> API-dən gələn məlumatlarda həssas məlumatları silmək:
-let apiResponse = {
-    userId: 123,
-    token: "abc123",
-    data: { name: "John", age: 30 }
-};
+// let apiResponse = {
+//     userId: 123,
+//     token: "abc123",
+//     data: { name: "John", age: 30 }
+// };
 
-delete apiResponse.token;
+// delete apiResponse.token;
 
-console.log(apiResponse); 
-// { userId: 123, data: { name: "John", age: 30 } }
+// console.log(apiResponse); 
+// // { userId: 123, data: { name: "John", age: 30 } }
