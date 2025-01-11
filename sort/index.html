@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort</title>
+    <style>
+        body {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h2{
+            margin-top: 30px ;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        ol {
+            margin: 20px 0;
+        }
+
+        ul {
+            padding: 0 20px;
+        }
+
+        span {
+            display: block;
+            margin: 10px 0;
+        }
+
+        b {
+            display: block;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>sort() array method</h1>
+
+    <p>
+        JavaScript-də sort() metodu, array-dəki elementləri müəyyən qaydada sıralamaq üçün istifadə edilir. Bu metod
+        array-i yerində dəyişdirir (yəni orijinal array üzərində əməliyyat aparır) və sıralanmış array qaytarır.
+    </p>
+
+    <h2>Əsas Xüsusiyyətlər</h2>
+    <ul>
+        <li><b>Standart Davranış:</b>
+            <ul>
+                <li>
+                    Əgər sort() metoduna heç bir funksiya ötürülməzsə, elementləri string olaraq (Unicode sırasına
+                    əsasən) sıralayır.
+                </li>
+                <li>
+                    Bu, rəqəmləri düzgün sıralamaya bilər.
+                </li>
+            </ul>
+        </li>
+        <li><b>Custom Sıralama:</b>
+            <ul>
+                <li>Öz sıralama qaydanızı müəyyən etmək üçün compareFunction adlanan funksiya ötürə bilərsiniz.</li>
+                <li>Bu funksiya array-dəki elementlər arasında sıralama qaydasını müəyyən edir.</li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <h2>Sintaksis:  array.sort(compareFunction)</h2>
+    <ul>
+        <li>
+            <b>compareFunction (opsional): Sıralama qaydasını təyin edən funksiya. Bu funksiya iki arqument qəbul edir:</b>
+            <ul>
+                <li>a: İndiki element.</li>
+                <li>b: Növbəti element.</li>
+            </ul>
+        </li>
+        <li>
+            <b>compareFunction qaytarır:</b>
+            <ul>
+                <li>negative value (a - b < 0) → a əvvəl gəlir.</li>
+                <li>positive value (a - b > 0) → b əvvəl gəlir.</li>
+                <li>0 → sıralama dəyişmir.</li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <h2>Əsas Məqamlar</h2>
+    <ul>
+        <li>
+            <b>Orijinal array dəyişir: sort() metodu array-in özünü dəyişdirir.</b>
+        </li>
+        <li>
+            <b>Müqayisə funksiyasının təbiəti:</b>
+            <ul>
+                <li>Əgər compareFunction qaytarmazsa, default string sıralaması tətbiq olunur.</li>
+                <li>Müqayisə funksiyası qaydalar təyin etmək üçün vacibdir.</li>
+            </ul>
+        </li>
+        <li>
+            <b>String və rəqəmlərdə fərqlilik:</b>
+            <ul>
+                <li>Stringlərdə Unicode sırası istifadə edilir.</li>
+                <li>Rəqəmləri düzgün sıralamaq üçün compareFunction tələb olunur.</li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <h2>Qısa Yekun    </h2>
+    <ul>
+        <li>sort(), array-dəki elementləri sıralamaq üçün istifadə edilir və array-in özünü dəyişir.</li>
+        <li>Stringlər üçün: Default əlifba sırası və Unicode qaydası tətbiq olunur.</li>
+        <li>Rəqəmlər üçün: Düzgün sıralama üçün compareFunction tələb olunur.</li>
+        <li>Custom qaydalar: compareFunction ilə istənilən qayda təyin edilə bilər.</li>
+    </ul>
+    <script src="./main.js"></script>
+</body>
+
+</html>
