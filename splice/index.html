@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splice</title>
+    <style>
+        body {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        ol {
+            margin: 20px 0;
+        }
+
+        ul {
+            padding: 0 20px;
+        }
+
+        span {
+            display: block;
+            margin: 10px 0;
+        }
+
+        b {
+            display: block;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>splice() array method</h1>
+
+    <p>
+        JavaScript-də splice() metodu massivlə işləmək üçün çox güclü və çevik bir vasitədir. Bu metod həm massivin
+        müəyyən bir hissəsini silmək, həm də həmin hissəyə yeni elementlər əlavə etmək üçün istifadə olunur
+    </p>
+
+    <h2>splice() Metodunun Sintaksisi: array.splice(start, deleteCount, item1, item2, ..., itemN)</h2>
+    <ul>
+        <li>
+            <b>Parametrlər:</b>
+            <ul>
+                <b>start (məcburi):</b>
+                <li>Silmə və ya əlavə etmənin başlayacağı indeks.</li>
+                <li>Əgər mənfi bir ədəddirsə, massivin sonundan başlayaraq hesablama aparılır</li>
+            </ul>
+            <ul>
+                <b>deleteCount (ixtiyari):</b>
+                <li>Silinəcək elementlərin sayı.</li>
+                <li>Əgər deleteCount 0-dırsa, heç bir element silinmir.</li>
+                <li>Əgər bu parametr göstərilməsə, start-dan sonra bütün elementlər silinir.</li>
+            </ul>
+            <ul>
+                <b>item1, item2, ..., itemN (ixtiyari):</b>
+                <li>
+                    Silinən elementlərin yerinə əlavə olunacaq elementlər. Əgər heç bir element göstərilməzsə, sadəcə
+                    silmə əməliyyatı icra olunur
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+
+    <h2>Metodun Xüsusiyyətləri</h2>
+    <ul>
+        <li>
+            <b>Dəyişikliklər massivin özündə edilir:</b>
+            splice() massivi dəyişir və bu dəyişikliklər birbaşa orijinal massivə təsir edir.
+        </li>
+        <li>
+            <b>Dönüş dəyəri:</b> Silinmiş elementləri özündə saxlayan yeni bir massiv qaytarır. Əgər heç bir element
+            silinməyibsə, boş massiv qaytarır.
+        </li>
+    </ul>
+
+
+    <h2>splice() ilə Əlaqəli Tövsiyələr</h2>
+    <ul>
+        <li>
+            <b> Original massiv dəyişir:</b> Əgər orijinal massivi dəyişməmək istəyirsinizsə, əvvəlcə onun bir nüsxəsini
+            (slice() və ya spread operator) yaradın.
+        </li>
+        <li>
+            Silinmiş elementlər lazımdırsa, dönüş dəyərindən istifadə edin.
+        </li>
+        <li>
+            <b>Böyük massivlərdə diqqətli olun:</b> Əməliyyatın performansı böyük massivlərdə yavaş ola bilər.
+        </li>
+    </ul>
+
+    <p>
+        splice() metodu həm sadə, həm də kompleks əməliyyatlar üçün güclü bir vasitədir. Onu səmərəli şəkildə istifadə
+        etmək üçün həm sintaksisi, həm də performans təsirlərini yaxşı başa düşmək vacibdir.
+    </p>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

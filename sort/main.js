@@ -95,7 +95,7 @@
 
 
 //! 5--> Təsadüfi Sıralama (Random Order)
-let items = [1, 2, 3, 4, 5];
+// let items = [1, 2, 3, 4, 5];
 // items.sort(() => Math.random() - 0.5);
 
 // console.log(items);
