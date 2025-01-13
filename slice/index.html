@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slice</title>
+    <style>
+        body {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        ol {
+            margin: 20px 0;
+        }
+
+        ul {
+            padding: 0 20px;
+        }
+
+        span {
+            display: block;
+            margin: 10px 0;
+        }
+
+        b {
+            display: block;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript slice() Metodu</h1>
+    <p>
+        slice() metodu JavaScript-də massivlər (və ya string obyektləri) üzərində istifadə olunur. Bu metod, mövcud
+        massiv və ya stringdən müəyyən bir hissəni seçib, orijinal obyektə toxunmadan yeni bir massiv və ya sətir
+        yaradır.
+    </p>
+
+    <h2>Sintaksis: array.slice(start, end); </h2>
+    <ul>
+        <li>start (istəyə bağlıdır): Hissənin başlanğıc indeksini göstərir. </li>
+        <li>Əgər mənfi bir rəqəmdirsə, massivdə sondan başlayaraq sayılır. </li>
+        <li>Əgər göstərilməsə, start dəyəri avtomatik olaraq 0 qəbul edilir. </li>
+        <li>end (istəyə bağlıdır): Hissənin bitmə indeksini göstərir. end indeksi daxil edilmir (yəni end-dən əvvəlki
+            elementlər daxil edilir). </li>
+        <li>Əgər göstərilməsə, end dəyəri avtomatik olaraq massiv uzunluğuna (array.length) bərabər götürülür. </li>
+        <li>Mənfi rəqəm verilərsə, sondan başlayaraq sayılır. </li>
+    </ul>
+
+    <h2>Xüsusiyyətlər: </h2>
+    <ul>
+        <li>Orijinal massiv dəyişdirilmir (immutability). </li>
+        <li>Yeni massiv və ya string qaytarır. </li>
+        <li>end həmişə exclusive (daxil edilmir). </li>
+    </ul>
+
+
+    <h2>slice() vs splice()</h2>
+    <ul>
+        <li>
+            slice(): Orijinal massivi dəyişdirmir. Yalnız yeni bir massiv yaradır.
+        </li>
+        <li>
+            splice(): Orijinal massivi dəyişdirir və silinmiş elementləri qaytarır.
+        </li>
+    </ul>
+
+    <h2>Yekun slice() metodu:</h2>
+    <ul>
+        <li> Massivlərdən və stringlərdən hissə götürmək üçün daha təhlükəsiz və çevik bir üsuldur. </li>
+        <li>Orijinal məlumat toxunulmaz qalır. </li>
+        <li>Müxtəlif praktiki hallarda istifadə edilə bilər: massivləri kopyalamaq, xüsusi hissələri seçmək, mənfi
+            indekslərlə arxadan hissələri çıxarmaq.</li>
+    </ul>
+    <script src="./main.js"></script>
+</body>
+
+</html>
